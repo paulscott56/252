@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: configserver
+
+encrypt:
+  failOnError: false
+eureka:
+  instance:
+    statusPageUrlPath: ${management.context-path}/info
+    healthCheckUrlPath: ${management.context-path}/health
+    hostname: configServer
+    preferIpAddress: true
+    defaultZone: http://127.0.0.1:8761/eureka/
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+info:
+  description: Config Server

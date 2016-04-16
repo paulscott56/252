@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: registry
+
+---
+
+spring:
+  profiles: docker
+  cloud:
+     config:
+        uri: http://localhost:8761
