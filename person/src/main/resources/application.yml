@@ -7,12 +7,12 @@ endpoints:
   shutdown:
     enabled: true
   health:
-    sensitive: false
+    sensitive: true
 
 spring.data.orient:
-  url: memory:orientdb/test1test
-  username: admin
-  password: admin
+  url: plocal:orientdb/iot
+  username: root
+  password: hello
 
 eureka:
   client:

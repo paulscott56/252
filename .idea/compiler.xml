@@ -23,6 +23,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="admin" />
+        <module name="coap" />
         <module name="configserver" />
         <module name="person" />
         <module name="registry" />
@@ -31,6 +32,7 @@
     <bytecodeTargetLevel>
       <module name="252" target="1.8" />
       <module name="admin" target="1.8" />
+      <module name="coap" target="1.8" />
       <module name="configserver" target="1.8" />
       <module name="person" target="1.8" />
       <module name="registry" target="1.8" />

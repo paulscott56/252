@@ -4,7 +4,6 @@ package za.co.paulscott.person.repository;
  * Created by pscot on 3/7/2016.
  */
 
-import za.co.paulscott.person.model.Person;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.orientechnologies.orient.core.sql.OCommandSQL;
@@ -14,6 +13,7 @@ import com.tinkerpop.blueprints.impls.orient.OrientGraph;
 import com.tinkerpop.blueprints.impls.orient.OrientGraphFactory;
 import com.tinkerpop.blueprints.impls.orient.OrientVertexType;
 import org.springframework.stereotype.Component;
+import za.co.paulscott.person.model.Person;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +25,7 @@ import java.util.List;
 @Component
 public class PersonRepository  {
 
-    private OrientGraphFactory factory = new OrientGraphFactory("remote:localhost/person", "admin", "admin").setupPool(1, 10);
+    private OrientGraphFactory factory = new OrientGraphFactory("remote:localhost/iot", "root", "hello").setupPool(1, 10);
 
     public String addPerson(Person person) {
         OrientGraph graph = factory.getTx();

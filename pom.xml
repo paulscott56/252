@@ -28,6 +28,7 @@
 		<module>person</module>
 		<module>registry</module>
         <module>configserver</module>
+        <module>coap</module>
 	</modules>
 
 
