@@ -8,6 +8,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/coap/pom.xml" />
+        <option value="$PROJECT_DIR$/auth/pom.xml" />
       </list>
     </option>
   </component>
