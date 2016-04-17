@@ -26,6 +26,7 @@
         <module name="auth" />
         <module name="coap" />
         <module name="configserver" />
+        <module name="mqtt" />
         <module name="person" />
         <module name="registry" />
       </profile>
@@ -36,6 +37,7 @@
       <module name="auth" target="1.8" />
       <module name="coap" target="1.8" />
       <module name="configserver" target="1.8" />
+      <module name="mqtt" target="1.8" />
       <module name="person" target="1.8" />
       <module name="registry" target="1.8" />
     </bytecodeTargetLevel>

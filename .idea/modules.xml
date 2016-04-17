@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/auth/auth.iml" filepath="$PROJECT_DIR$/auth/auth.iml" />
       <module fileurl="file://$PROJECT_DIR$/coap/coap.iml" filepath="$PROJECT_DIR$/coap/coap.iml" />
       <module fileurl="file://$PROJECT_DIR$/configserver/configserver.iml" filepath="$PROJECT_DIR$/configserver/configserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mqtt/mqtt.iml" filepath="$PROJECT_DIR$/mqtt/mqtt.iml" />
       <module fileurl="file://$PROJECT_DIR$/person/person.iml" filepath="$PROJECT_DIR$/person/person.iml" />
       <module fileurl="file://$PROJECT_DIR$/registry/registry.iml" filepath="$PROJECT_DIR$/registry/registry.iml" />
     </modules>
