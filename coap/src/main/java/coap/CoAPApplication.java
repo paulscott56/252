@@ -32,7 +32,10 @@ public class CoAPApplication extends CoapServer {
 
     @Bean
     CaliforniumServer getServer() {
-        return new CaliforniumServer();
+        server = new CaliforniumServer();
+        server.addEndpoints();
+        server.start();
+        return server;
     }
 
 

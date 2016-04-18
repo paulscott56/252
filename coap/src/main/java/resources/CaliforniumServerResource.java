@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class CaliforniumServerResource extends CoapResource {
 
     public CaliforniumServerResource() {
-        super(null);
+        super("hello");
     }
 
     public CaliforniumServerResource(String name) {
@@ -27,6 +27,6 @@ public class CaliforniumServerResource extends CoapResource {
 
     @Override
     public void handleGET(CoapExchange exchange) {
-        exchange.respond(CoAP.ResponseCode.VALID);
+        exchange.respond("yo");
     }
 }

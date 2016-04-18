@@ -5,6 +5,7 @@ import org.eclipse.californium.core.network.CoapEndpoint;
 import org.eclipse.californium.core.network.EndpointManager;
 import org.eclipse.californium.core.network.config.NetworkConfig;
 import org.springframework.stereotype.Component;
+import resources.CaliforniumServerResource;
 
 import java.net.Inet4Address;
 import java.net.InetAddress;
@@ -20,8 +21,9 @@ public class CaliforniumServer extends CoapServer {
     private static final int COAP_PORT = NetworkConfig.getStandard().getInt(NetworkConfig.Keys.COAP_PORT);
 
     public CaliforniumServer() {
-       this.addEndpoints();
-        this.start();
+       add(new CaliforniumServerResource());
+       addEndpoints();
+       start();
 
     }
 
@@ -36,7 +38,7 @@ public class CaliforniumServer extends CoapServer {
     /**
      * Add individual endpoints listening on default CoAP port on all IPv4 addresses of all network interfaces.
      */
-    private void addEndpoints() {
+    public void addEndpoints() {
         for (InetAddress addr : EndpointManager.getEndpointManager().getNetworkInterfaces()) {
             // only binds to IPv4 addresses and localhost
             if (addr instanceof Inet4Address || addr.isLoopbackAddress()) {
