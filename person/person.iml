@@ -101,13 +101,13 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-core:4.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:1.11.4.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: com.orientechnologies:orientdb-core:2.0.13" level="project" />
+    <orderEntry type="library" name="Maven: com.orientechnologies:orientdb-core:2.1.8" level="project" />
     <orderEntry type="library" name="Maven: org.xerial.snappy:snappy-java:1.1.0.1" level="project" />
     <orderEntry type="library" name="Maven: com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:1.4.1" level="project" />
     <orderEntry type="library" name="Maven: net.java.dev.jna:jna:4.0.0" level="project" />
     <orderEntry type="library" name="Maven: net.java.dev.jna:jna-platform:4.0.0" level="project" />
-    <orderEntry type="library" name="Maven: com.orientechnologies:orientdb-client:2.0.13" level="project" />
-    <orderEntry type="library" name="Maven: com.orientechnologies:orientdb-enterprise:2.0.13" level="project" />
+    <orderEntry type="library" name="Maven: com.orientechnologies:orientdb-client:2.1.8" level="project" />
+    <orderEntry type="library" name="Maven: com.orientechnologies:orientdb-enterprise:2.1.8" level="project" />
     <orderEntry type="library" name="Maven: org.jooq:jooq:3.7.2" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:jul-to-slf4j:1.7.16" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.16" level="project" />
@@ -131,11 +131,11 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:1.3.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-orientdb-document:0.10.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-orientdb-graph:0.10.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: com.orientechnologies:orientdb-graphdb:2.0.13" level="project" />
-    <orderEntry type="library" name="Maven: com.orientechnologies:orientdb-server:2.0.13" level="project" />
+    <orderEntry type="library" name="Maven: com.orientechnologies:orientdb-graphdb:2.1.8" level="project" />
+    <orderEntry type="library" name="Maven: com.orientechnologies:orientdb-server:2.1.8" level="project" />
     <orderEntry type="library" name="Maven: javax.mail:mail:1.4" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
-    <orderEntry type="library" name="Maven: com.orientechnologies:orientdb-tools:2.0.13" level="project" />
+    <orderEntry type="library" name="Maven: com.orientechnologies:orientdb-tools:2.1.8" level="project" />
     <orderEntry type="library" name="Maven: com.tinkerpop.blueprints:blueprints-core:2.6.0" level="project" />
     <orderEntry type="library" name="Maven: com.carrotsearch:hppc:0.6.0" level="project" />
     <orderEntry type="library" name="Maven: com.tinkerpop.gremlin:gremlin-java:2.6.0" level="project" />
