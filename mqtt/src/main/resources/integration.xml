@@ -31,7 +31,7 @@
                                        url="tcp://localhost:1883"
                                        default-qos="0"
                                        default-retained="true"
-                                       default-topic="tweets/dstv" />
+                                       default-topic="tweets/mqtt" />
 
     <!-- these elements define a flow MQTT subscribe->transform->File -->
     <!-- referred to as "inbound" in the README -->
