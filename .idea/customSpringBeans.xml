@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CustomBeanRegistry">
+    <option name="map">
+      <map>
+        <entry key="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;int-mqtt:message-driven-channel-adapter xmlns:int-mqtt=&quot;http://www.springframework.org/schema/integration/mqtt&quot; id=&quot;oneTopicAdapter&quot; client-id=&quot;spring-foo-2&quot; client-factory=&quot;clientFactory&quot; auto-startup=&quot;true&quot; url=&quot;tcp://iot.eclipse.org:1883&quot; topics=&quot;inbound/#&quot; send-timeout=&quot;123&quot; /&gt;&#10;&#10;">
+          <value>
+            <list>
+              <CustomBeanInfo>
+                <option name="beanName" value="channelInitializer" />
+                <option name="beanClassName" value="org.springframework.integration.config.ChannelInitializer" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="org.springframework.integration.expression.IntegrationEvaluationContextAwareBeanPostProcessor#0" />
+                <option name="beanClassName" value="org.springframework.integration.expression.IntegrationEvaluationContextAwareBeanPostProcessor" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="integrationGlobalProperties" />
+                <option name="beanClassName" value="org.springframework.beans.factory.config.PropertiesFactoryBean" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="integrationHeaderChannelRegistry" />
+                <option name="beanClassName" value="org.springframework.integration.channel.DefaultHeaderChannelRegistry" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="toStringFriendlyJsonNodeToStringConverter" />
+                <option name="beanClassName" value="org.springframework.integration.json.ToStringFriendlyJsonNodeToStringConverter" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="converterRegistrar" />
+                <option name="beanClassName" value="org.springframework.integration.context.ConverterRegistrar" />
+                <option name="constructorArgumentCount" value="1" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="integrationConversionService" />
+                <option name="beanClassName" value="org.springframework.integration.context.CustomConversionServiceFactoryBean" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="DefaultConfiguringBeanFactoryPostProcessor" />
+                <option name="beanClassName" value="org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="datatypeChannelMessageConverter" />
+                <option name="beanClassName" value="org.springframework.integration.support.converter.DefaultDatatypeChannelMessageConverter" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="messageBuilderFactory" />
+                <option name="beanClassName" value="org.springframework.integration.support.DefaultMessageBuilderFactory" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="integrationLifecycleRoleController" />
+                <option name="beanClassName" value="org.springframework.integration.support.SmartLifecycleRoleController" />
+                <option name="constructorArgumentCount" value="2" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="oneTopicAdapter" />
+                <option name="beanClassName" value="org.springframework.integration.channel.DirectChannel" />
+                <option name="idAttribute" value="id" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="oneTopicAdapter.adapter" />
+                <option name="beanClassName" value="org.springframework.integration.mqtt.inbound.MqttPahoMessageDrivenChannelAdapter" />
+                <option name="constructorArgumentCount" value="4" />
+              </CustomBeanInfo>
+            </list>
+          </value>
+        </entry>
+        <entry key="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;int-mqtt:outbound-channel-adapter xmlns:int-mqtt=&quot;http://www.springframework.org/schema/integration/mqtt&quot; id=&quot;mqtt-publish&quot; client-id=&quot;spring-foo-1&quot; client-factory=&quot;clientFactory&quot; auto-startup=&quot;true&quot; url=&quot;tcp://iot.eclipse.org:1883&quot; default-qos=&quot;0&quot; default-retained=&quot;true&quot; default-topic=&quot;tweets/spring-integration&quot; /&gt;&#10;&#10;">
+          <value>
+            <list>
+              <CustomBeanInfo>
+                <option name="beanName" value="channelInitializer" />
+                <option name="beanClassName" value="org.springframework.integration.config.ChannelInitializer" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="org.springframework.integration.expression.IntegrationEvaluationContextAwareBeanPostProcessor#0" />
+                <option name="beanClassName" value="org.springframework.integration.expression.IntegrationEvaluationContextAwareBeanPostProcessor" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="integrationGlobalProperties" />
+                <option name="beanClassName" value="org.springframework.beans.factory.config.PropertiesFactoryBean" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="integrationHeaderChannelRegistry" />
+                <option name="beanClassName" value="org.springframework.integration.channel.DefaultHeaderChannelRegistry" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="toStringFriendlyJsonNodeToStringConverter" />
+                <option name="beanClassName" value="org.springframework.integration.json.ToStringFriendlyJsonNodeToStringConverter" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="converterRegistrar" />
+                <option name="beanClassName" value="org.springframework.integration.context.ConverterRegistrar" />
+                <option name="constructorArgumentCount" value="1" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="integrationConversionService" />
+                <option name="beanClassName" value="org.springframework.integration.context.CustomConversionServiceFactoryBean" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="DefaultConfiguringBeanFactoryPostProcessor" />
+                <option name="beanClassName" value="org.springframework.integration.config.DefaultConfiguringBeanFactoryPostProcessor" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="datatypeChannelMessageConverter" />
+                <option name="beanClassName" value="org.springframework.integration.support.converter.DefaultDatatypeChannelMessageConverter" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="messageBuilderFactory" />
+                <option name="beanClassName" value="org.springframework.integration.support.DefaultMessageBuilderFactory" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="integrationLifecycleRoleController" />
+                <option name="beanClassName" value="org.springframework.integration.support.SmartLifecycleRoleController" />
+                <option name="constructorArgumentCount" value="2" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="mqtt-publish" />
+                <option name="beanClassName" value="org.springframework.integration.channel.DirectChannel" />
+                <option name="idAttribute" value="id" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="org.springframework.integration.mqtt.outbound.MqttPahoMessageHandler#0" />
+                <option name="beanClassName" value="org.springframework.integration.mqtt.outbound.MqttPahoMessageHandler" />
+                <option name="constructorArgumentCount" value="3" />
+              </CustomBeanInfo>
+              <CustomBeanInfo>
+                <option name="beanName" value="mqtt-publish.adapter" />
+                <option name="beanClassName" value="org.springframework.integration.config.ConsumerEndpointFactoryBean" />
+              </CustomBeanInfo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
