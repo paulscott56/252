@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/coap/pom.xml" />
         <option value="$PROJECT_DIR$/auth/pom.xml" />
         <option value="$PROJECT_DIR$/mqtt/pom.xml" />
+        <option value="$PROJECT_DIR$/lwm2m/pom.xml" />
       </list>
     </option>
   </component>

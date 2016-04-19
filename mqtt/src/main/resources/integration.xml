@@ -14,7 +14,7 @@
     <!-- referred to as "outbound" in the README -->
 
     <twitter:search-inbound-channel-adapter id="tweets"
-                                            query="mqtt"
+                                            query="dstv"
                                             twitter-template="twitterTemplate">
         <int:poller fixed-rate="5000" />
     </twitter:search-inbound-channel-adapter>
