@@ -13,8 +13,8 @@
     <!-- these elements define a flow Twitter search->transform->MQTT publish -->
     <!-- referred to as "outbound" in the README -->
 
-    <twitter:search-inbound-channel-adapter id="tweets"
-                                            query="dstv"
+    <!--<twitter:search-inbound-channel-adapter id="tweets"
+                                            query="paulscott56"
                                             twitter-template="twitterTemplate">
         <int:poller fixed-rate="5000" />
     </twitter:search-inbound-channel-adapter>
@@ -22,16 +22,16 @@
     <int:transformer
             input-channel="tweets"
             expression="'@' + payload.fromUser + ': ' + payload.text"
-            output-channel="mqtt-publish" />
+            output-channel="mqtt-publish" />-->
 
     <int-mqtt:outbound-channel-adapter id="mqtt-publish"
                                        client-id="spring-foo-1"
                                        client-factory="clientFactory"
                                        auto-startup="true"
-                                       url="tcp://localhost:1883"
+                                       url="tcp://192.168.0.3:1883"
                                        default-qos="0"
                                        default-retained="true"
-                                       default-topic="tweets/mqtt" />
+                                       default-topic="/outTopic" />
 
     <!-- these elements define a flow MQTT subscribe->transform->File -->
     <!-- referred to as "inbound" in the README -->
@@ -40,8 +40,8 @@
                                              client-id="spring-foo-2"
                                              client-factory="clientFactory"
                                              auto-startup="true"
-                                             url="tcp://localhost:1883"
-                                             topics="inbound/#"
+                                             url="tcp://192.168.0.3:1883"
+                                             topics="/inTopic"
                                              send-timeout="123" />
 
     <int:transformer id="convert"

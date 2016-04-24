@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: mqtt
+  cloud:
+    config:
+      uri: http://localhost:8888
+encrypt:
+  failOnError: false
