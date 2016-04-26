@@ -43,7 +43,7 @@ public class MqttApplication {
     @Bean
     public MqttPahoClientFactory mqttClientFactory() {
         DefaultMqttPahoClientFactory factory = new DefaultMqttPahoClientFactory();
-        factory.setServerURIs("tcp://192.168.0.3:1883");
+        factory.setServerURIs("tcp://localhost:1883");
         return factory;
     }
 
@@ -76,7 +76,7 @@ public class MqttApplication {
     @Bean
     public MessageProducer inbound() {
         MqttPahoMessageDrivenChannelAdapter adapter =
-                new MqttPahoMessageDrivenChannelAdapter("tcp://192.168.0.3:1883", "testClient",
+                new MqttPahoMessageDrivenChannelAdapter("tcp://localhost:1883", "SpringClient",
                         "/inTopic");
         adapter.setCompletionTimeout(5000);
         adapter.setConverter(new DefaultPahoMessageConverter());
@@ -93,6 +93,7 @@ public class MqttApplication {
             @Override
             public void handleMessage(Message<?> message) throws MessagingException {
                 System.out.println(message.getPayload());
+
             }
 
         };

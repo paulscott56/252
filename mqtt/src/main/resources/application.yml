@@ -9,6 +9,15 @@ endpoints:
   health:
     sensitive: true
 
+spring:
+   data:
+      mongodb.host: localhost
+      mongodb.port: 27017
+      mongodb.uri: mongodb://localhost/mqtt
+      mongodb.database: mqtt
+      mongo.repositories.enabled: true
+      mongo.username:
+      mongo.password:
 
 #eureka:
 #  client:
