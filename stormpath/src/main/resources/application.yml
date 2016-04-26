@@ -1,0 +1,22 @@
+server:
+  port: 20000
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: true
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+stormpath:
+  apiKey:
+    id: 55BC2HKG5UCUACU4ZRXWAW5GJ
+    secret: jNzcuxTr0t8dU8Wcvbjvvma/eADoXzz2nBeHCLjtFi0

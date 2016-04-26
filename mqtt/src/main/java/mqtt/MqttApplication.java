@@ -1,7 +1,14 @@
 package mqtt;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import mqtt.model.*;
+import mqtt.repo.KodiRepository;
 import org.apache.log4j.Logger;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -25,11 +32,17 @@ import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.MessageHandler;
 import org.springframework.messaging.MessagingException;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @IntegrationComponentScan
 @SpringBootApplication
 public class MqttApplication {
 
     private static final Logger LOGGER = Logger.getLogger(MqttApplication.class);
+
+    @Autowired
+    private KodiRepository kodiRepo;
 
     /**
      * Load the Spring Integration Application Context
@@ -77,7 +90,7 @@ public class MqttApplication {
     public MessageProducer inbound() {
         MqttPahoMessageDrivenChannelAdapter adapter =
                 new MqttPahoMessageDrivenChannelAdapter("tcp://localhost:1883", "SpringClient",
-                        "/inTopic");
+                        "/inTopic/#", "/kodi/status/title");
         adapter.setCompletionTimeout(5000);
         adapter.setConverter(new DefaultPahoMessageConverter());
         adapter.setQos(1);
@@ -92,7 +105,68 @@ public class MqttApplication {
 
             @Override
             public void handleMessage(Message<?> message) throws MessagingException {
-                System.out.println(message.getPayload());
+                // System.out.println(message.getHeaders().get("mqtt_topic") + "  " + message.getPayload());
+                KodiTitle t = new KodiTitle();
+                StreamDetails sd = new StreamDetails();
+                Subtitle s = new Subtitle();
+
+                String payload = message.getPayload().toString();
+                // System.out.println(payload);
+                JsonParser parser = new JsonParser();
+                try {
+                    List<Audio> alist = new ArrayList<Audio>();
+                    List<Video> vlist = new ArrayList<Video>();
+
+                    JsonObject o = parser.parse(payload).getAsJsonObject();
+                    JsonObject details = o.getAsJsonObject("kodi_details");
+                    JsonObject stream = details.getAsJsonObject("streamdetails");
+
+                    // build the audio, video and subtitle objects
+                    JsonArray audio = stream.getAsJsonArray("audio");
+                    for (JsonElement aj : audio) {
+                        //System.out.println(aj.toString());
+                        JsonObject j = aj.getAsJsonObject();
+                        Audio a = new Audio();
+                        a.setChannels(j.get("channels").getAsInt());
+                        a.setCodec(j.get("codec").getAsString());
+                        a.setLanguage(j.get("language").getAsString());
+                        alist.add(a);
+                    }
+
+                    JsonArray video = stream.getAsJsonArray("video");
+                    for (JsonElement vj : video) {
+                        //System.out.println(vj.toString());
+                        JsonObject j = vj.getAsJsonObject();
+                        Video v = new Video();
+                        v.setCodec(j.get("codec").getAsString());
+                        v.setAspect(j.get("aspect").getAsDouble());
+                        v.setDuration(j.get("duration").getAsInt());
+                        v.setHeight(j.get("height").getAsInt());
+                        v.setStereomode(j.get("stereomode").getAsString());
+                        v.setWidth(j.get("width").getAsInt());
+                        vlist.add(v);
+                    }
+
+                    // set the stream details
+                    sd.setAudio(alist);
+                    sd.setSubtitle(s);
+                    sd.setVideo(vlist);
+
+                    t.setType(details.get("type").getAsString());
+                    t.setTitle(details.get("title").getAsString());
+                    t.setFanart(details.get("fanart").getAsString());
+                    t.setFile(details.get("file").getAsString());
+                    t.setLabel(details.get("label").getAsString());
+                    t.setThumbnail(details.get("thumbnail").getAsString());
+                    t.setVal("");
+                    t.setStreamdetails(sd);
+
+                    kodiRepo.save(t);
+
+                } catch(Exception e) {
+                    // do nothing for now
+                    e.printStackTrace();
+                }
 
             }
 

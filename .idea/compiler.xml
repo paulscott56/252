@@ -30,6 +30,7 @@
         <module name="mqtt" />
         <module name="person" />
         <module name="registry" />
+        <module name="stormpath" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -42,6 +43,7 @@
       <module name="mqtt" target="1.8" />
       <module name="person" target="1.8" />
       <module name="registry" target="1.8" />
+      <module name="stormpath" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
