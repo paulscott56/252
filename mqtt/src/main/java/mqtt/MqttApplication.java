@@ -165,7 +165,7 @@ public class MqttApplication {
 
                 } catch(Exception e) {
                     // do nothing for now
-                    e.printStackTrace();
+                    // e.printStackTrace();
                 }
 
             }
